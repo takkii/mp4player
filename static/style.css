@@ -1,0 +1,91 @@
+/* 中央揃え */
+.center-position {
+    text-align: center;
+}
+
+/* video_list用 */
+.under-position {
+    text-align: center;
+    position: relative;
+    bottom: 0.5vw;
+}
+
+/* video_detail用 */
+.under-detail-position {
+    text-align: center;
+    position: relative;
+    bottom: -16vw;
+}
+
+/* フォントアクア色 */
+.font-aqua {
+    color: aqua;
+}
+
+/* フォントマゼンタ色 */
+.font-magenta {
+    color: magenta;
+}
+
+/* コンテナの設定 */
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* 複数行に対応 */
+    gap: 20px;
+    /* カード間の間隔 */
+    justify-content: center;
+    /* 中央揃え */
+    padding: 20px;
+    list-style-type: none;
+    /* リストスタイルを削除 */
+}
+
+/* 各動画カードの設定 */
+.video-card {
+    width: 320px;
+    /* カードの幅 */
+    border: 1px solid #ddd;
+    /* ボーダー */
+    border-radius: 8px;
+    /* 角丸 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* シャドウ */
+    overflow: hidden;
+    /* 内容がはみ出ないようにする */
+    text-align: center;
+    background-color: #fff;
+}
+
+/* カード内のサムネイル画像 */
+.video-card img {
+    width: 100%;
+    /* カード幅に合わせる */
+    height: auto;
+    max-height: 200px;
+    /* 画像の最大高さ */
+    object-fit: cover;
+    /* 画像の縦横比を維持しつつ、領域に収める */
+}
+
+/* カード内のタイトル */
+.video-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* カード内の説明文 */
+.video-card p {
+    font-size: 14px;
+    color: #666;
+    padding: 0 10px 10px;
+    margin: 0;
+}
+
+/* カード内の動画再生エリア */
+.video-card video {
+    width: 100%;
+    /* カード幅に合わせる */
+    margin-top: 10px;
+    /* 動画の上にスペースを追加 */
+}

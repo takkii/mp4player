@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <link rel="stylesheet" href="{% static 'style.css' %}">
+ <link rel="icon" href="{% static 'img/favicon.ico' %}">
+ <title>試作版動画配信サイト</title>
+</head>
+
+<body>
+ <p>
+  <div class="font-aqua">
+   <h1 style="text-align: center;">試作版動画配信サイト</h1>
+  </div>
+ </p>
+ <div align="center">
+  <ul class="video-list">
+   {% for video in videos %}
+   <li class="video-card">
+    {% if video.thumbnail %}
+    <img src="{{ video.thumbnail.url }}" alt="{{ video.title }}">
+            {% endif %}
+    <!-- 動画ファイルを再生 -->
+    {% if video.video_file %}
+    <video controls>
+     <source src="{{ video.video_file.url }}" type="video/mp4">
+     <div class="font-magenta">お使いのブラウザは動画再生に対応していません。</div>
+    </video>
+    {% endif %}
+    <h3>{{ video.title }}</h3>
+    <p>
+     <div class="font-magenta">{{ video.description }}</div>
+    </p>
+    <!-- localhostは独自ドメインに置き換える予定 -->
+    <p>
+     <div class="font-aqua"><a href="http://localhost/video/{{video.id}}/">動画詳細情報 {{video.id}}</a></div>
+    </p>
+   </li>
+   {% endfor %}
+  </ul>
+  <p>
+   <div class="under-position">Copyright &copy; Takayuki Kamiyama, 2025年4月1日 - {% now "DATE_FORMAT" %}.</div>
+  </p>
+  <p>
+   <div class="under-position">
+    <p>System Name is SRC「Spring Rain Custom」</p>
+   </div>
+  </p>
+ </div>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+django
+mysqlclient
+python-dotenv
+pytz
+waitress
