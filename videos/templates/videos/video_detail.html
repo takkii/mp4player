@@ -3,51 +3,52 @@
 <html lang="ja">
 
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- <link rel="stylesheet" href="{% static 'style.css' %}">
- <link rel="icon" href="{% static 'img/favicon.ico' %}">
- <div class="font-aqua">
-  <title>{{ video.title }}</title>
- </div>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="icon" href="{% static 'img/favicon.ico' %}">
+  <div class="font-aqua">
+    <title>{{ video.title }}</title>
+  </div>
 </head>
 
 <body>
- <div class="center-position">
-  <p>
-   <h1>{{ video.title }}</h1>
-  </p>
-  <p>
-   <div class="font-aqua">{{ video.description }}</div>
-  </p>
-  <p>
-   <div class="font-aqua">カテゴリ: {{ video.category }}</div>
-  </p>
-  <p>
-   <div class="font-aqua">総視聴数: {{ video.view_count }} 回</div>
-  </p>
-  <p>
-   <div class="font-magenta">公開日: {{ video.published_at }}</div>
-  </p>
-  <p>
-   <div class="font-magenta">アップロードした人: {{ video.uploaded_by.username }}</div>
-  </p>
-  <p>
-   <div class="font-aqua"><a href="{% url 'video_list' %}">戻る</a></div>
-  </p>
- </div>
- <div align="center">
-  <p>
-   <div class="under-detail-position">Copyright &copy; Takayuki Kamiyama, 2025年4月1日 - {% now "DATE_FORMAT" %}.</div>
-  </p>
-  <p>
-   <div class="under-detail-position">
-    <p>System Name is SRC「Spring Rain Custom」</p>
-   </div>
-  </p>
- </div>
+  <div class="center-position">
+    <p>
+    <h1>{{ video.title }}</h1>
+    </p>
+    <p>
+    <div class="font-aqua">{{ video.description }}</div>
+    </p>
+    <p>
+    <div class="font-aqua">カテゴリ: {{ video.category }}</div>
+    </p>
+    <p>
+    <div class="font-aqua">総視聴数: {{ video.view_count }} 回</div>
+    </p>
+    <p>
+    <div class="font-magenta">公開日: {{ video.published_at }}</div>
+    </p>
+    <p>
+    <div class="font-magenta">アップロードした人: {{ video.uploaded_by.username }}</div>
+    </p>
+    <p>
+    <div class="font-aqua"><a href="{% url 'video_list' %}">戻る</a></div>
+    </p>
+  </div>
+  <div align="center">
+    <p>
+    <div class="under-detail-position">Copyright &copy; Takayuki Kamiyama, 2025年4月1日 - {% now "DATE_FORMAT" %}.</div>
+    </p>
+    <p>
+    <div class="under-detail-position">
+      <p>System Name is SRC「Spring Rain Custom」</p>
+    </div>
+    </p>
+  </div>
 </body>
 
 </html>
