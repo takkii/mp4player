@@ -15,7 +15,7 @@ python manage.py createsuperuser
 ```
 
 ```markdown
-# wsgiサーバ: 本番用、稼働時はdockerでnginxを利用する
+# wsgiサーバ: 本番用
 waitress-serve --port=80 mp4player.wsgi:application
 
 > INFO:waitress:Serving on http://0.0.0.0:80
