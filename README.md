@@ -1,5 +1,7 @@
 ### 動画配信サイト
 
+環境構築は、[こちら](https://github.com/takkii/mp4player/tree/main/wiki)。
+
 ```markdown
 # FireFox / 対応済み、現在は動作する。
 動画ファイル形式.mp4、「サポートされたファイル形式およびMIMEタイプの動画が見つかりませんでした。」
