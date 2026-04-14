@@ -1,5 +1,7 @@
 ### 動画配信サイト
 
+![python](./images/python.gif)
+
 環境構築は、[こちら](https://github.com/takkii/mp4player/tree/main/wiki)。
 
 ```markdown
