@@ -1,4 +1,14 @@
-### 使い方
+### 環境構築
+
+```markdown
+# FireFox / 対応済み、現在は動作する。
+動画ファイル形式.mp4 「サポートされたファイル形式およびMIMEタイプの動画が見つかりませんでした。」
+管理側、管理画面へログイン。各種設定ができる。
+動画配信サイトファイル情報へアクセスもできる。
+アップロードしたい動画をMicrosoft Clipcampで編集しmp4形式でエクスポートする必要あり。
+```
+
+[管理画面](http://localhost/admin/) | [動画配信サイト](http://localhost) | [ファイル情報](http://localhost/video/1/)
 
 ```markdown
 # mariadb、rootパスワード設定
