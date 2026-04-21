@@ -4,7 +4,7 @@
 
 <div align="center">
   <h2><p>動画配信サイト</p></h2>
-  <img src="./images/python.gif">
+  <img src="./images/disc.gif" alt="ロゴをディスク風に加工">
 </div>
 
 <hr />
